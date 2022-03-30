@@ -1,0 +1,15 @@
+.players {
+  background-color: #f0eeee;
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    padding: 20px 10px;
+  }
+}

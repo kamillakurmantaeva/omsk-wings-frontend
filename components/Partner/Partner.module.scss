@@ -1,0 +1,97 @@
+@import 'mixins';
+
+.partners {
+  &__item {
+    max-width: 355px;
+    min-width: 240px;
+    margin-right: 25px;
+    margin-bottom: 60px;
+    @include breakpoint(980px) {
+      max-width: 45%;
+      margin-right: 0px;
+    }
+    @include breakpoint(525px) {
+      max-width: 100%;
+    }
+    &__icon {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      > div {
+        max-width: 180px;
+        max-height: 48px;
+      }
+    }
+    &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      color: #171717;
+      margin-bottom: 10px;
+    }
+    &__descr {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 125%;
+      color: #8d8d8d;
+      opacity: 0.8;
+    }
+  }
+  &__icon {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    @include breakpoint(370px) {
+      align-self: center;
+    }
+  }
+  &__title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 78px;
+    line-height: 28px;
+    color: #171717;
+  }
+  &__descr {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    min-height: 90px;
+    color: #8d8d8d;
+  }
+}
+
+.other {
+  max-width: 180px;
+  min-width: 152px;
+  position: relative;
+  margin-right: 12px;
+  margin-bottom: 37px;
+
+  @include breakpoint(600px) {
+    max-width: 40%;
+  }
+  @include breakpoint(400px) {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+
+  > :nth-child(1) {
+    min-height: 60px;
+    > div {
+      max-width: 60px;
+      max-height: 40px;
+    }
+  }
+  > :nth-child(3) {
+    font-size: 12px;
+  }
+}

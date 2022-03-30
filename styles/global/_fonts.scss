@@ -1,0 +1,5 @@
+@mixin font-montserrat($font-weight: normal, $font-style: normal) {
+  font-family: Montserrat, sans-serif;
+  font-style: $font-style;
+  font-weight: $font-weight;
+}

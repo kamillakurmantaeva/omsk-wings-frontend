@@ -1,0 +1,102 @@
+@import 'mixins';
+
+.staff {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 0 15px;
+}
+
+.staff__headline {
+  font-size: 40px;
+  padding-top: 60px;
+
+  @include breakpoint(3480px) {
+    padding-left: 25px;
+  }
+
+  @include breakpoint(980px) {
+    margin-bottom: 15px;
+  }
+
+  @include breakpoint(320px) {
+    padding: 40px 0 15px 0;
+  }
+}
+
+.staff__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+
+  @include breakpoint(1350px) {
+    margin: 0 25px;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(980px) {
+    margin: 0;
+    justify-content: space-evenly;
+  }
+
+  @include breakpoint(526px) {
+    margin: 15px 0 10px;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(510px) {
+    justify-content: space-evenly;
+  }
+}
+
+.staff__card {
+  margin: 10px 0;
+  width: 23%;
+
+  @include breakpoint(1240px) {
+    min-width: 373px;
+    width: 373px;
+    min-height: 463px;
+    height: 463px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  @include breakpoint(980px) {
+    max-width: 444px;
+    min-width: 444px;
+    max-height: 500px;
+    min-height: 500px;
+    margin: 20px 0;
+  }
+
+  @include breakpoint(526px) {
+    max-width: 240px;
+    min-width: 240px;
+    max-height: 385px;
+    min-height: 385px;
+  }
+
+  @include breakpoint(510px) {
+    max-width: 315px;
+    min-width: 315px;
+    max-height: 430px;
+    min-height: 430px;
+  }
+
+  @include breakpoint(320px) {
+    max-width: 290px;
+    min-width: 290px;
+    max-height: 450px;
+    min-height: 450px;
+    margin: 10px 0;
+  }
+}
+
+.staff__card__image {
+  @include breakpoint(1240px) {
+    padding-top: 40px;
+    width: 230px;
+    height: 230px;
+  }
+}

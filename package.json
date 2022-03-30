@@ -1,0 +1,57 @@
+{
+  "name": "omsk-wings",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start -p 3030",
+    "type-check": "tsc",
+    "lint": "next lint",
+    "lint:fix": "yarn prettier:fix && next lint --fix",
+    "prettier:fix": "yarn prettier \"./**/*.{ts,tsx,scss}\" --write"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "clsx": "^1.1.1",
+    "dayjs": "^1.10.5",
+    "exenv": "^1.2.2",
+    "mobx": "^6.2.0",
+    "mobx-react": "^7.1.0",
+    "next": "latest",
+    "node-fetch": "^2.6.1",
+    "plural-ru": "^2.0.2",
+    "react": "^17.0.1",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^17.0.1",
+    "react-from-dom": "^0.6.0",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-remove-scroll": "^2.4.3",
+    "react-yandex-maps": "^4.6.0",
+    "sass": "^1.32.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "@types/exenv": "^1.2.0",
+    "@types/node": "^12.12.21",
+    "@types/node-fetch": "^2.5.10",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.2.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "4",
+    "prettier": "2.3.2",
+    "typescript": "^4.0",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:fix"
+    }
+  }
+}

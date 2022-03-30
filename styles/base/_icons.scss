@@ -1,0 +1,235 @@
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  @include icon;
+}
+
+.icon-aim {
+  &:before {
+    content: $icon-aim;
+    color: #f00;
+  }
+}
+.icon-alarm {
+  &:before {
+    content: $icon-alarm;
+    color: #e80505;
+  }
+}
+.icon-arena {
+  &:before {
+    content: $icon-arena;
+    color: #e80505;
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up;
+  }
+}
+.icon-clap {
+  &:before {
+    content: $icon-clap;
+    color: #e80505;
+  }
+}
+.icon-clothes {
+  &:before {
+    content: $icon-clothes;
+    color: #e80505;
+  }
+}
+.icon-cup {
+  &:before {
+    content: $icon-cup;
+    color: #e80505;
+  }
+}
+.icon-entrance {
+  &:before {
+    content: $icon-entrance;
+    color: #c4c5c7;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-fist {
+  &:before {
+    content: $icon-fist;
+    color: #e80505;
+  }
+}
+.icon-flag {
+  &:before {
+    content: $icon-flag;
+    color: #e80505;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+.icon-inst-header {
+  &:before {
+    content: $icon-inst-header;
+    color: #c4c5c7;
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location;
+    color: #e80505;
+  }
+}
+.icon-lock {
+  &:before {
+    content: $icon-lock;
+    color: #e80505;
+  }
+}
+.icon-luggage {
+  &:before {
+    content: $icon-luggage;
+    color: #e80505;
+  }
+}
+.icon-mask {
+  &:before {
+    content: $icon-mask;
+    color: #f00;
+  }
+}
+.icon-medal {
+  &:before {
+    content: $icon-medal;
+    color: #e80505;
+  }
+}
+.icon-mini-arrow-down {
+  &:before {
+    content: $icon-mini-arrow-down;
+  }
+}
+.icon-mini-arrow-up {
+  &:before {
+    content: $icon-mini-arrow-up;
+  }
+}
+.icon-pdf {
+  &:before {
+    content: $icon-pdf;
+    color: #e80505;
+  }
+}
+.icon-penta {
+  &:before {
+    content: $icon-penta;
+  }
+}
+.icon-people {
+  &:before {
+    content: $icon-people;
+    color: #e80505;
+  }
+}
+.icon-puck {
+  &:before {
+    content: $icon-puck;
+    color: #c4c5c7;
+  }
+}
+.icon-route {
+  &:before {
+    content: $icon-route;
+    color: #e80505;
+  }
+}
+.icon-seats {
+  &:before {
+    content: $icon-seats;
+    color: #e80505;
+  }
+}
+.icon-shield {
+  &:before {
+    content: $icon-shield;
+    color: #e80505;
+  }
+}
+.icon-square {
+  &:before {
+    content: $icon-square;
+    color: #e80505;
+  }
+}
+.icon-sticks {
+  &:before {
+    content: $icon-sticks;
+    color: #f00;
+  }
+}
+.icon-team {
+  &:before {
+    content: $icon-team;
+    color: #e80505;
+  }
+}
+.icon-ticket {
+  &:before {
+    content: $icon-ticket;
+    color: #e80505;
+  }
+}
+.icon-ticket1 {
+  &:before {
+    content: $icon-ticket1;
+  }
+}
+.icon-t-shirt {
+  &:before {
+    content: $icon-t-shirt;
+    color: #c4c5c7;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+.icon-twitter-header {
+  &:before {
+    content: $icon-twitter-header;
+    color: #c4c5c7;
+  }
+}
+.icon-vk {
+  &:before {
+    content: $icon-vk;
+  }
+}
+.icon-vk-header {
+  &:before {
+    content: $icon-vk-header;
+    color: #c4c5c7;
+  }
+}
+.icon-web {
+  &:before {
+    content: $icon-web;
+    color: #c4c5c7;
+  }
+}
+.icon-youtube-header {
+  &:before {
+    content: $icon-youtube-header;
+    color: #c4c5c7;
+  }
+}

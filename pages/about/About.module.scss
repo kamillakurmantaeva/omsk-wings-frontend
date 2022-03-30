@@ -1,0 +1,15 @@
+@import 'mixins';
+.about {
+  &__content {
+    max-width: 1160px;
+    margin: 0px auto;
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    justify-content: space-between;
+    @include breakpoint(980px) {
+      padding: 0px 15px;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import 'mixins';
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @include breakpoint(585px) {
+    padding: 15px 0px;
+  }
+}
+.about {
+  &__section {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #4f4f4f;
+    &__trophies {
+      display: flex;
+      align-items: center;
+      max-width: 835px;
+      justify-content: space-between;
+      padding: 30px 0;
+      @include breakpoint(830px) {
+        flex-direction: column;
+        align-items: baseline;
+      }
+    }
+    &__trophy {
+      display: flex;
+      align-items: center;
+      max-width: 375px;
+      width: 100%;
+      justify-content: space-between;
+      @include breakpoint(375px) {
+        flex-direction: column;
+        align-items: baseline;
+      }
+      &__icon {
+        width: 100%;
+        max-width: 38px;
+        height: 38px;
+        font-size: 38px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        span {
+          position: absolute;
+          top: -5%;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 28px;
+          color: #ffffff;
+        }
+      }
+      &__descr {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+        color: #4f4f4f;
+      }
+    }
+    span {
+      font-weight: 900;
+    }
+    &__content {
+      max-width: 900px;
+      width: 100%;
+    }
+    &__title {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 43px;
+      color: #4f4f4f;
+    }
+    &__img {
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__result {
+      display: flex;
+      width: 285px;
+      justify-content: space-between;
+    }
+  }
+}

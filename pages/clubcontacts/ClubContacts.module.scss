@@ -1,0 +1,90 @@
+@import 'mixins';
+
+.contacts {
+  min-height: 100vh;
+  padding: 0 40px;
+
+  @include breakpoint(980px) {
+    padding: 0 20px;
+  }
+
+  @include breakpoint(320px) {
+    padding: 0 15px;
+  }
+}
+
+.contacts__headline {
+  font-size: 40px;
+  padding-top: 60px;
+  margin-bottom: 10px;
+
+  @include breakpoint(980px) {
+    margin-bottom: 30px;
+  }
+
+  @include breakpoint(320px) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__info {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: pre-wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  @include breakpoint(1240px) {
+    margin-bottom: 90px;
+  }
+
+  @include breakpoint(980px) {
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__card {
+  width: 23%;
+  margin-right: 2%;
+
+  @include breakpoint(1240px) {
+    width: 240px;
+  }
+
+  @include breakpoint(980px) {
+    width: 250px;
+  }
+
+  @include breakpoint(560px) {
+    width: 230px;
+  }
+
+  @include breakpoint(515px) {
+    width: 310px;
+  }
+}
+
+.contacts__title {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 40px 0 16px;
+
+  @include breakpoint(980px) {
+    margin: 20px 0 15px;
+  }
+
+  @include breakpoint(560px) {
+    margin: 25px 0 15px;
+  }
+}
+
+.contacts__text {
+  font-size: 16px;
+  color: #4f4f4f;
+  line-height: 26px;
+}
+
+.contacts__map {
+  margin: 10px 0 40px;
+}

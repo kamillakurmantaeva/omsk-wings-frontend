@@ -1,0 +1,35 @@
+@import 'mixins';
+
+.partners {
+  &__section {
+    &__title {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 37px;
+      color: #171717;
+      margin-bottom: 50px;
+      @include breakpoint(320px) {
+        margin-bottom: 35px;
+      }
+    }
+    &__wrapp {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      justify-content: space-around;
+      @include breakpoint(980px) {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+.general {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  @include breakpoint(980px) {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,95 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  background-color: $whiteColor;
+  opacity: 0.5;
+
+  color: #fff;
+
+  &-wide {
+    bottom: 0;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: inline-block;
+
+  width: vmin(64px);
+  height: vmin(64px);
+
+  margin-top: vmin(-30px);
+
+  transform: translate(-50%, -50%);
+
+  div {
+    position: absolute;
+    top: vmin(27px);
+
+    width: vmin(11px);
+    height: vmin(11px);
+
+    border-radius: 50%;
+    background: $black800Color;
+
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+    &:nth-child(1) {
+      left: vmin(6px);
+
+      animation: loader1 0.6s infinite;
+
+      @keyframes loader1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      left: vmin(6px);
+
+      animation: loader2 0.6s infinite;
+
+      @keyframes loader2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(#{vmin(19px)}, 0);
+        }
+      }
+    }
+    &:nth-child(3) {
+      left: vmin(26px);
+    }
+    &:nth-child(4) {
+      left: vmin(45px);
+
+      animation: loader3 0.6s infinite;
+
+      @keyframes loader3 {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.icon {
+  width: 70px;
+  height: 70px;
+  opacity: 0.6;
+  position: relative;
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+  }
+  & > div {
+    width: 40px;
+    height: 70px;
+  }
+}

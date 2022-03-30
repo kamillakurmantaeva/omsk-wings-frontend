@@ -1,0 +1,75 @@
+html,
+body {
+  overscroll-behavior-y: contain;
+
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: $appMinWidth;
+
+  margin: 0;
+
+  background-color: $whiteColor;
+
+  @include font-montserrat;
+  font-size: vmin($fontSizePrimary);
+  font-weight: normal;
+  color: $black800Color;
+  @include font-smoothing;
+
+  &.menu-opened {
+    overflow: hidden;
+  }
+}
+
+button,
+input {
+  @include font-montserrat;
+  font-size: 20px;
+  color: $black800Color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: vmin(50px);
+}
+
+h2 {
+  font-size: vmin(30px);
+}
+
+h3 {
+  font-size: vmin(25px);
+}
+
+h4 {
+  font-size: vmin(20px);
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#__next {
+  height: 100%;
+}
+
+.link {
+  color: #3365e5;
+
+  cursor: pointer;
+}

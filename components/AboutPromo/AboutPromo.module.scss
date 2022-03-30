@@ -1,0 +1,99 @@
+@import 'mixins';
+.container {
+  max-width: 1240px;
+  width: 100%;
+  padding: 60px 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-bottom: 2px solid #f1f1f1;
+  @include breakpoint(980px) {
+    padding: 60px 15px;
+  }
+}
+.about {
+  &__promo {
+    &__title {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 49px;
+      color: #000000;
+    }
+    &__subtitle {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 37px;
+      color: #171717;
+    }
+    &__descr {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      color: #4f4f4f;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include breakpoint(585px) {
+        flex-direction: column-reverse;
+      }
+    }
+    &__text {
+      max-width: 800px;
+      width: 100%;
+    }
+    &__icons {
+      display: flex;
+      max-width: 720px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      @include breakpoint(585px) {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: 340px;
+      }
+      &__item {
+        display: flex;
+        align-items: flex-end;
+        max-width: 210px;
+        width: 100%;
+      }
+    }
+  }
+  &__item {
+    &__year {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #e80505;
+    }
+    &__text {
+      margin-left: 17px;
+    }
+    &__title {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      color: #e80505;
+      text-transform: uppercase;
+    }
+    &__cup {
+      height: 70px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import 'mixins';
+.header {
+  > :nth-child(3) {
+    width: 100%;
+    border-bottom: 1px solid #dbdee1;
+  }
+}

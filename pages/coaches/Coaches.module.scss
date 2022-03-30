@@ -1,0 +1,33 @@
+@import 'mixins';
+
+.coach {
+  background-color: #f0eeee;
+  padding-bottom: 10px;
+}
+
+.coach__back {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include breakpoint(500px) {
+    padding: 0 15px;
+  }
+
+  @include breakpoint(400px) {
+    padding: 0 10px;
+  }
+
+  @include breakpoint(320px) {
+    padding: 0 5px;
+  }
+}
+
+.coach__headline {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  padding-top: 60px;
+  margin-bottom: 40px;
+}

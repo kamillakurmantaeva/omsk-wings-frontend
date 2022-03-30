@@ -1,0 +1,128 @@
+@import 'mixins';
+.bottom {
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  &__burger {
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    left: 10px;
+    position: absolute;
+    display: none;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      position: absolute;
+      top: 42%;
+      transition: 0.5s ease;
+    }
+    &::before {
+      transform: translateY(10px);
+    }
+    &::after {
+      transform: translateY(-10px);
+    }
+    &_on {
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(135deg);
+      }
+    }
+    &__line {
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      &_on {
+        opacity: 0;
+      }
+    }
+    @include breakpoint(980px) {
+      display: block;
+    }
+    &_on {
+      top: 4%;
+      position: fixed;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    max-width: 280px;
+    justify-content: space-evenly;
+  }
+  &__nav {
+    width: 100%;
+    @include breakpoint(980px) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      background-color: #fff;
+      bottom: 0;
+      z-index: 2;
+      height: 100vh;
+      visibility: hidden;
+      opacity: 0;
+      &_on {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    @include breakpoint(980px) {
+      flex-direction: column;
+      height: 94%;
+    }
+  }
+  &__ticket {
+    min-width: 155px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f9f9f9;
+    background: #f4322a;
+    @include breakpoint(980px) {
+      display: none;
+    }
+    i {
+      width: 19px;
+      font-size: 19px;
+      margin-right: 13px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 15px;
+      text-align: center;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+  }
+}

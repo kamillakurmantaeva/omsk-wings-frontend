@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://omsk-wings.site/sitemap.xml

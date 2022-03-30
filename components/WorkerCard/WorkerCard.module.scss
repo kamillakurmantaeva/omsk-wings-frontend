@@ -1,0 +1,83 @@
+@import 'mixins';
+
+.worker__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-width: 330px;
+  width: 330px;
+  min-height: 440px;
+  height: 440px;
+  padding: 25px 65px;
+
+  @include breakpoint(1240px) {
+    padding-top: 40px;
+  }
+
+  @include breakpoint(526px) {
+    padding: 25px 35px;
+  }
+
+  @include breakpoint(320px) {
+    padding: 30px 45px;
+  }
+}
+
+.worker__card__photo {
+  border-radius: 50%;
+  margin: 10px 65px;
+}
+
+.worker__card__name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+
+  @include breakpoint(1240px) {
+    margin-top: 20px;
+  }
+
+  @include breakpoint(980px) {
+    margin: 25px 0 40px;
+  }
+
+  @include breakpoint(526px) {
+    margin-bottom: 15px;
+  }
+}
+
+.worker__card__position {
+  font-size: 17px;
+  font-weight: 600;
+  color: #e80505;
+  margin-bottom: 10px;
+}
+
+.worker__card__experience {
+  text-align: center;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 22px;
+  color: #aeaeae;
+
+  @include breakpoint(980px) {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint(526px) {
+    margin-bottom: 10px;
+  }
+
+  @include breakpoint(320px) {
+    margin: 15px 0;
+  }
+}
+
+.worker__card__birthday {
+  font-weight: 500;
+  font-size: 16px;
+  color: #aeaeae;
+}

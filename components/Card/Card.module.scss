@@ -1,0 +1,346 @@
+@import 'mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  @include breakpoint(980px) {
+    padding: 0 15px;
+  }
+}
+
+.wrapper {
+  background-color: #f0eeee;
+  height: 100%;
+}
+
+.card {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 450px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  background-color: #fff;
+  &:last-child {
+    margin-bottom: 100px;
+  }
+
+  &__container {
+    max-width: 1400px;
+    margin-bottom: 30px;
+    padding: 0 10px 20px;
+
+    @include breakpoint(340px) {
+      box-sizing: border-box;
+      padding: 0 8px 20px;
+    }
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100px;
+  }
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1037px;
+
+    @include breakpoint(724px) {
+      flex-direction: column;
+      min-height: 600px;
+    }
+  }
+  &__pic {
+    overflow: hidden;
+    position: relative;
+
+    min-width: 318px;
+
+    width: 318px;
+    height: 367px;
+
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+    &__bg {
+      position: absolute;
+      bottom: 0;
+
+      width: 318px;
+      height: 318px;
+
+      border-radius: 50%;
+      background-color: #f9f9f9;
+      @include breakpoint(350px) {
+        left: 3%;
+        text-align: center;
+        width: 300px;
+      }
+    }
+
+    &__person {
+      position: absolute;
+      top: -30px;
+      width: 100%;
+      height: 110%;
+      @include breakpoint(320px) {
+        top: 0;
+      }
+    }
+    img {
+      width: inherit !important;
+      height: 100% !important;
+      min-width: inherit !important;
+      max-width: inherit !important;
+      min-height: inherit !important;
+      max-height: inherit !important;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 610px;
+    min-height: 320px;
+
+    @include breakpoint(724px) {
+      align-items: center;
+      text-align: center;
+    }
+
+    @include breakpoint(400px) {
+      max-width: 350px;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 500;
+      color: red;
+    }
+    &__name {
+      max-width: 327px;
+      font-size: 30px;
+      font-weight: 500;
+    }
+    &__date {
+      max-width: 420px;
+      display: flex;
+      flex-wrap: wrap;
+      @include breakpoint(724px) {
+        justify-content: center;
+      }
+    }
+    &__birthday {
+      font-size: 18px;
+      font-weight: 500;
+      color: #aeaeae;
+    }
+    &__age {
+      font-size: 18px;
+      font-weight: 500;
+      color: #aeaeae;
+    }
+    &__description {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      color: #4f4f4f;
+    }
+  }
+
+  &__bio {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 1026px;
+    height: 100%;
+    max-height: 0;
+    margin: 0 auto;
+    margin-top: 60px;
+    opacity: 0;
+
+    transition: 0.5s ease;
+
+    @include breakpoint(320px) {
+      text-align: center;
+      padding: 0 5px;
+      box-sizing: border-box;
+    }
+
+    &On {
+      max-height: 3000px;
+      min-height: 100px;
+      opacity: 1;
+      justify-content: space-around;
+    }
+
+    &__coach {
+      width: 100%;
+      max-width: 1037px;
+      margin-top: 0;
+    }
+    &__coaches {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      @include breakpoint(724px) {
+        justify-content: center;
+        text-align: center;
+      }
+      &__empty {
+        min-width: 318px;
+
+        @include breakpoint(724px) {
+          display: none;
+        }
+      }
+      &__wrap {
+        width: 610px;
+
+        > div {
+          max-width: 610px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 28px;
+          color: #4f4f4f;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &__years {
+      &__menu {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        @include breakpoint(320px) {
+          width: 101%;
+        }
+      }
+      &__item {
+        list-style: none;
+      }
+      &__link {
+        font-size: 18px;
+        font-weight: normal;
+        color: #aeaeae;
+        text-decoration: none;
+        transition: 1s ease;
+        display: block;
+        overflow-wrap: break-word;
+        &:hover {
+          color: #979696;
+          transform: scale(1.1);
+        }
+
+        &-active {
+          color: #171717;
+        }
+      }
+    }
+    &__descr {
+      animation-name: apperBio;
+      animation-duration: 1s;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      color: #4f4f4f;
+      min-height: 56px;
+      text-align: center;
+    }
+    &__button {
+      bottom: 0;
+      align-self: center;
+
+      width: 185px;
+      height: 40px;
+      margin: 0 auto 20px;
+
+      &__link {
+        display: block;
+        position: relative;
+        border: none;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+
+        transform: matrix(1, 0, 0, 1, 0, 0);
+
+        background-color: #ebebeb;
+        transition: 1s;
+        &:hover {
+          background-color: #cec5c5;
+        }
+
+        &On {
+          transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+        &::before {
+          content: '';
+
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          width: 15px;
+          height: 4px;
+
+          margin-top: -2px;
+          margin-left: -15px;
+
+          transform: rotate(45deg);
+
+          border-radius: 10px;
+          background-color: #625f5f;
+        }
+        &::after {
+          content: '';
+
+          display: block;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          width: 15px;
+          height: 4px;
+
+          margin-top: -2px;
+          margin-left: -7px;
+
+          border-radius: 10px;
+          background-color: #625f5f;
+
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+}
+@keyframes apperBio {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

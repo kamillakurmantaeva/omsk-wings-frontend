@@ -1,0 +1,45 @@
+@import 'mixins';
+.footer {
+  &__link {
+    list-style: none;
+    @include breakpoint(585px) {
+      height: 20px;
+      overflow: hidden;
+      max-height: 3000px;
+      min-height: 20px;
+      width: 50%;
+    }
+    &_on {
+      height: 100%;
+    }
+  }
+  &__submenu {
+    list-style: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: rgb(255, 255, 254, 0.4);
+    text-transform: none;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    &__link {
+      margin-bottom: 10px;
+      @include breakpoint(585px) {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f4322a;
+        color: #fffffe;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      > a:hover {
+        color: rgb(255, 255, 254, 0.7);
+        transition: all 0.1s ease;
+      }
+    }
+  }
+}

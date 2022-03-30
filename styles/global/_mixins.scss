@@ -1,0 +1,120 @@
+@use "sass:math";
+@import 'variables';
+@import 'icon-variables';
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '';
+
+    display: table;
+
+    clear: both;
+  }
+}
+
+@mixin orientation($orientation: landscape) {
+  @media (orientation: $orientation) {
+    @content;
+  }
+}
+
+@mixin breakpoint($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-width($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between-width($width1, $width2) {
+  @media (min-width: $width1) and (max-width: $width2) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-height($height) {
+  @media (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max-size($width, $height) {
+  @media (max-width: $width) and (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-size($width, $height) {
+  @media (min-width: $width) and (min-height: $height) {
+    @content;
+  }
+}
+
+@mixin icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  font-weight: normal;
+  font-style: normal !important;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none !important;
+
+  speak: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function em($target, $context: $fontSizePrimary) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round(($target / $context * 1em) * 100) * 0.01;
+}
+
+@function vmin($target, $context: $baseMarkupWidth) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round((math.div($target, $context) * 1vmin) * 10000) * 0.01;
+}
+
+@function vmax($target, $context: $baseMarkupWidth) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round((math.div($target, $context) * 1vmax) * 10000) * 0.01;
+}
+
+@function vw($target, $context: $baseMarkupWidth) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round((math.div($target, $context) * 1vw) * 10000) * 0.01;
+}
+
+@function vh($target, $context: $baseMarkupWidth) {
+  @if ($target == '0px' or $target == 0) {
+    @return 0;
+  }
+
+  @return round((math.div($target, $context) * 1vh) * 10000) * 0.01;
+}

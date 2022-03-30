@@ -1,0 +1,249 @@
+@import 'mixins';
+
+.main {
+  width: 100%;
+  background-color: #f9f9f9;
+
+  .container {
+    max-width: 1160px;
+    margin: 0px auto;
+    position: relative;
+    padding: 0px 40px;
+
+    @include breakpoint(980px) {
+      padding: 0px 15px;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 43px;
+      color: #4f4f4f;
+    }
+
+    .photo {
+      padding-top: 60px;
+
+      @include breakpoint(980px) {
+        padding-top: 40px;
+      }
+
+      h1 {
+        width: 136px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 49px;
+        color: #000000;
+        margin-bottom: 40px;
+      }
+
+      > :nth-child(2) img {
+        border-radius: 16px 16px 0px 0px;
+      }
+
+      .facts {
+        background: #ffffff;
+        border-radius: 0px 0px 16px 16px;
+        display: flex;
+        margin-top: -8px;
+        align-items: center;
+
+        @include breakpoint(980px) {
+          flex-wrap: wrap;
+          padding-top: 15px;
+        }
+
+        .card {
+          height: 43px;
+          display: flex;
+          align-items: center;
+          margin: 27px 0px;
+          padding: 0px 33px;
+
+          @include breakpoint(980px) {
+            margin: 15px 0px;
+            padding: 0px 15px;
+            flex: 40%;
+          }
+          @include breakpoint(525px) {
+            width: 100%;
+            flex: auto;
+          }
+          @include breakpoint(320px) {
+            margin: 6px 0px;
+          }
+
+          i {
+            width: 28px;
+            height: 28px;
+            font-size: 28px;
+            margin-right: 11px;
+
+            @include breakpoint(525px) {
+              margin-right: 20px;
+            }
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: #4f4f4f;
+          }
+        }
+
+        > :nth-child(1) {
+          i {
+            width: 36px;
+            height: 36px;
+            font-size: 36px;
+            margin-right: 25px;
+
+            @include breakpoint(980px) {
+              width: 32px;
+              height: 32px;
+              font-size: 32px;
+              margin-right: 8px;
+            }
+            @include breakpoint(525px) {
+              margin-right: 14px;
+            }
+          }
+
+          p {
+            width: 209px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: -0.01em;
+            color: #4f4f4f;
+          }
+        }
+
+        > :nth-child(2) {
+          border-right: solid 1px #dbdee1;
+        }
+        > :nth-child(4) {
+          border-left: solid 1px #dbdee1;
+        }
+
+        @include breakpoint(980px) {
+          > :nth-child(2) {
+            border-right: none;
+            border-left: solid 1px #dbdee1;
+          }
+        }
+        @include breakpoint(525px) {
+          > :nth-child(2),
+          :nth-child(4) {
+            border: none;
+          }
+        }
+      }
+    }
+
+    .about {
+      margin-top: 60px;
+
+      @include breakpoint(980px) {
+        margin-top: 68px;
+      }
+      @include breakpoint(320px) {
+        margin-top: 40px;
+      }
+
+      .text {
+        display: flex;
+        margin: 30px 0px;
+
+        @include breakpoint(980px) {
+          margin-bottom: 54px;
+        }
+        @include breakpoint(525px) {
+          flex-wrap: wrap;
+        }
+        @include breakpoint(320px) {
+          margin: 20px 0px 5px 0px;
+        }
+
+        p {
+          width: 533px;
+          font-size: 16px;
+          line-height: 28px;
+          color: #4f4f4f;
+
+          @include breakpoint(980px) {
+            width: 455px;
+          }
+          @include breakpoint(525px) {
+            margin-bottom: 15px;
+          }
+        }
+
+        > :nth-child(1) {
+          margin-right: 80px;
+
+          @include breakpoint(980px) {
+            margin-right: 40px;
+          }
+          @include breakpoint(525px) {
+            margin-right: auto;
+          }
+        }
+      }
+
+      .regulations {
+        display: flex;
+
+        i {
+          width: 28px;
+          height: 28px;
+          font-size: 28px;
+          margin-right: 10px;
+
+          @include breakpoint(320px) {
+            margin-right: 20px;
+          }
+        }
+
+        > :nth-child(2) {
+          width: 465px;
+          font-size: 14px;
+          line-height: 17px;
+          text-decoration-line: underline;
+          color: #4f4f4f;
+
+          &:hover {
+            color: #000000;
+            transition: all 0.2s ease;
+          }
+        }
+      }
+    }
+
+    .map {
+      margin-top: 65px;
+
+      @include breakpoint(980px) {
+        margin-top: 44px;
+      }
+      @include breakpoint(320px) {
+        margin-top: 40px;
+      }
+
+      .ymaps {
+        margin-top: 40px;
+        padding-bottom: 103px;
+
+        @include breakpoint(980px) {
+          padding-bottom: 143px;
+        }
+        @include breakpoint(320px) {
+          margin-top: 15px;
+          padding-bottom: 23px;
+        }
+      }
+    }
+  }
+}

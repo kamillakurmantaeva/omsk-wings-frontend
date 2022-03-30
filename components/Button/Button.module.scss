@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'mixins';
+
+.btn {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  padding: vmin($appHorizontalOffset) 0;
+
+  background-color: $black800Color;
+  border: none;
+  box-shadow: 0 vmin(6px) vmin(20px) rgba(0, 0, 0, 0.3);
+  border-radius: vmin(28px);
+
+  font-size: vmin(14px);
+  font-weight: bold;
+  color: rgba($whiteColor, 0.9);
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+
+  transition: all 0.1s ease, transform 0.2s ease;
+  transform: translateY(0) scale(1);
+
+  cursor: pointer;
+
+  &:before {
+    display: inline-block;
+
+    margin: vmin(-12px) vmin(8px) vmin(-12px) 0;
+
+    font-size: vmin(24px);
+  }
+
+  &:active {
+    transform: translateY(1px) scale(0.995);
+  }
+
+  &:disabled {
+    background-color: $grey400Color;
+
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,14 @@
+.social {
+  width: 40px;
+  height: 20px;
+  opacity: 0.6;
+  display: flex;
+  position: relative;
+  &:hover {
+    opacity: 1;
+  }
+  & div {
+    width: 20px;
+    height: 20px;
+  }
+}

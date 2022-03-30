@@ -1,0 +1,149 @@
+@import 'mixins';
+
+.container {
+  max-width: 1160px;
+  margin: 0px auto;
+  padding: 0px 40px;
+  position: relative;
+
+  @include breakpoint(980px) {
+    padding: 0px 15px;
+  }
+
+  h1 {
+    max-width: 444px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+    margin: 60px 0px 40px 0px;
+
+    @include breakpoint(400px) {
+      margin: 40px 0px 32px 0px;
+    }
+  }
+
+  .link {
+    display: flex;
+    max-width: 465px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #4f4f4f;
+
+    &:hover {
+      color: #000000;
+      transition: all 0.2s ease;
+    }
+  }
+
+  .rules {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto 80px auto;
+
+    @include breakpoint(800px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include breakpoint(400px) {
+      margin: 20px auto 25px auto;
+    }
+
+    > :nth-child(1) {
+      margin-right: 20px;
+
+      @include breakpoint(800px) {
+        margin-right: 0px;
+      }
+    }
+
+    .wrapper {
+      width: max-content;
+
+      .content {
+        max-width: 570px;
+        background: #ffffff;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        margin-bottom: 15px;
+
+        .nav {
+          display: none;
+        }
+
+        .plank {
+          height: 94px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0px 35px;
+
+          @include breakpoint(400px) {
+            padding: 0px 25px;
+          }
+
+          > :nth-child(1) {
+            width: 26px;
+            height: 26px;
+            font-size: 26px;
+          }
+
+          .title {
+            width: 380px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: #4f4f4f;
+            margin: 0px 16px 0px 20px;
+
+            @include breakpoint(400px) {
+              margin: 0px 0px 0px 30px;
+            }
+          }
+
+          .icon {
+            width: 34px;
+            height: 34px;
+            font-size: 34px;
+            color: #171717;
+            opacity: 0.3;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            transition: all 0.5s ease-in-out;
+            transform-origin: 50% 50% 0;
+          }
+        }
+
+        .text {
+          overflow: hidden;
+          height: 0;
+
+          p {
+            font-size: 16px;
+            line-height: 28px;
+            color: #4f4f4f;
+            border-top: solid 1px #f1f1f1;
+            padding: 30px 0px;
+            margin: 0px 35px;
+
+            @include breakpoint(400px) {
+              margin: 0px 25px;
+            }
+          }
+        }
+
+        .nav:checked ~ label > .icon {
+          transform: rotate(0.5turn);
+        }
+
+        .nav:checked ~ .enabled {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
